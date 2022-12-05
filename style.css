@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+
+h2 {
+  margin: 5px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 20px;
+}
+
+#books-container div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+#books-container:has(div) {
+  position: relative;
+  border: 2px solid gray;
+  margin-bottom: 50px;
+}
+
+#books-container div.gray {
+  background-color: #d5d5d5;
+}
+
+#books-container:has(div)::before {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 3px;
+  left: 50%;
+  bottom: -25px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background-color: gray;
+}
+
+form {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: fit-content;
+  margin-top: 40px;
+  left: 50%;
+  transform: translateX(-51%);
+}
+
+form button {
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 2px solid;
+  align-items: center;
+  padding: 0 20px;
+}
+
+header ul {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  list-style-type: none;
+}
+
+header ul li {
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+header ul li:hover,
+header ul li.active {
+  color: blue;
+}
+
+header ul li:not(:first-child) {
+  border-left: 2px solid;
+}
+
+#contact {
+  display: none;
+  margin-left: 30px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 10px 0 10px 0;
+  border: 2px solid;
+  width: 100%;
+  background-color: white;
+}
+
+footer p {
+  margin: 0 20px;
+}

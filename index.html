@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Hello!</h1>
+   <header>
+    <nav>
+        <div>Awesome books</div>
+        <ul>
+            <li data-link="list" class="active nav-link">list</li>
+            <li data-link="add-new" class="nav-link">Add new</li>
+            <li data-link="contact" class="nav-link">contact</li>
+        </ul>
+    </nav>
+</header>
+<div class="time-box"><span class="current-time">Current Time</span></div>
+<section id="books-list">
+    <h1>Awesome book</h1>
+    <div id="books-container">
+
+    </div>
+</section>
+<form action="">
+    <h1>Add a new book</h1>
+    <label for="title" hidden>Title</label>
+    <input type="text" id="title">
+    <br>
+    <label for="author" hidden>Author</label>
+    <input type="text" id="author">
+    <br>
+    <button type="submit" id="submit">add</button>
+</form>
+<section id="contact">
+    <h1>Contact information</h1>
+    <p>Do you have any questions or just want to sat "Hello"?</p>
+    <p>You can reach out to us!</p>
+    <ul>
+        <li>Our email.com</li>
+        <li>Our phone number 100000055</li>
+        <li>Our address 44th street California</li>
+    </ul>
+</section>
+<footer> <p> Copyright...</p></footer>
+<script type="module" src="./index.js"></script>
+
+</body>
+</html>
