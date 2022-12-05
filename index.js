@@ -1,12 +1,13 @@
+import {
+  displaybooks, getLocalStorage, setLocalStorage, displayDateTime,
+} from './modules/main.js';
+
 const bookTitle = document.querySelector('#title');
 const author = document.querySelector('#author');
 const submitButton = document.querySelector('#submit');
 const form = document.querySelector('form');
 const contact = document.querySelector('#contact');
 const booksList = document.querySelector('#books-list');
-
-
-import { displaybooks, getLocalStorage, setLocalStorage, displayDateTime } from "./modules/main.js";
 
 let booksArray = [];
 
@@ -23,20 +24,12 @@ submitButton.addEventListener('click', (e) => {
       author: author.value,
     };
     booksArray.push(list);
-    
+
     setLocalStorage(booksArray);
     booksArray = getLocalStorage();
     displaybooks(booksArray);
-    
   }
 });
-
-const navigation = document.querySelectorAll('.nav-link');
-navigation.forEach((nav)=>{
-    nav.addEventListener('click', ()=>{
-        showContent(nav);
-    })
-})
 
 // eslint-disable-next-line no-unused-vars
 function showContent(id) {
@@ -63,4 +56,11 @@ function showContent(id) {
       form.style.display = 'none';
       contact.style.display = 'none';
   }
+
+  const navigation = document.querySelectorAll('.nav-link');
+  navigation.forEach((nav) => {
+    nav.addEventListener('click', () => {
+      showContent(nav);
+    });
+  });
 }
